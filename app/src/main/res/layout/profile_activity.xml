@@ -14,7 +14,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="305dp"
-            android:background="#121C43"
+            android:background="#121A40"
             android:orientation="vertical">
 
             <de.hdodenhof.circleimageview.CircleImageView
