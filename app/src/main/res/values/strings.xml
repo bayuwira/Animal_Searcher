@@ -2,4 +2,9 @@
     <string name="app_name">Animal Searcher</string>
     <string name="nama_item">Nama Item</string>
     <string name="item_detail">Item Detail</string>
+    <string name="animal_searcher">ANIMAL SEARCHER</string>
+    <string name="profile_name">I Putu Bayu Wira Brata</string>
+    <string name="profile_email">bayuwira1718@gmail.com</string>
+    <string name="profile_phone">082146164752</string>
+    <string name="profile_birth">08 / January / 1999</string>
 </resources>
