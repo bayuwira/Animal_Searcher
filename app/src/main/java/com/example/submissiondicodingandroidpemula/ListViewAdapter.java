@@ -1,5 +1,7 @@
 package com.example.submissiondicodingandroidpemula;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,10 +15,11 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ListViewHolder> {
-    private ArrayList<Item> listItem;
     private OnItemClickCallback onItemClickCallback;
+    private ArrayList<Item> listItem;
 
     public ListViewAdapter(ArrayList<Item> list_animal) {
         this.listItem = list_animal;
@@ -35,7 +38,8 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ListVi
 
     @Override
     public void onBindViewHolder(@NonNull final ListViewHolder holder, int position) {
-        Item item= listItem.get(position);
+        final Item item = listItem.get(position);
+
         Glide.with(holder.itemView.getContext())
                 .load(item.getPhoto())
                 .apply(new RequestOptions().override(100,100))
@@ -45,8 +49,8 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ListVi
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                onItemClickCallback.onItemClicked(listItem.get(holder.getAdapterPosition()));
+            public void onClick(View view) {
+                onItemClickCallback.onItemClicked(item);
             }
         });
     }
@@ -67,9 +71,5 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ListVi
             tvName = itemView.findViewById(R.id.tv_name);
             tvDetail = itemView.findViewById(R.id.tv_detail);
         }
-    }
-
-    public interface OnItemClickCallback{
-        void onItemClicked(Item data);
     }
 }

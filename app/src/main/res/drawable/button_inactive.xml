@@ -8,9 +8,6 @@
                 android:color="@color/colorPrimary"/>
             <solid
                 android:color="#FFF"/>
-            <corners
-                android:topRightRadius="30dp"
-                android:bottomRightRadius="30dp"/>
         </shape>
     </item>
 </selector>

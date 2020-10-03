@@ -148,15 +148,6 @@
             android:layout_marginBottom="40dp"
             android:background="#D3D3D3"/>
 
-        <ImageView
-            android:id="@+id/profile_btn_back"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginRight="10dp"
-            android:src="@drawable/ic_baseline_arrow_back_24" />
-
-
 
     </LinearLayout>
 
