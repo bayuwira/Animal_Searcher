@@ -42,7 +42,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.ListVi
 
         Glide.with(holder.itemView.getContext())
                 .load(item.getPhoto())
-                .apply(new RequestOptions().override(100,100))
+                .apply(new RequestOptions().centerCrop())
                 .into(holder.imgPhoto);
         holder.tvName.setText(item.getName());
         holder.tvDetail.setText(item.getDetail());

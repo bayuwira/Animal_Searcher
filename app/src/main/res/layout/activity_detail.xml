@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".DetailActivity">
+
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/app_bar">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -18,64 +22,67 @@
                 android:layout_width="match_parent"
                 android:layout_height="260dp"
                 android:layout_gravity="center"
-                tools:src="@drawable/jalak_bali"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="20dp"
+                tools:src="@drawable/jalak_bali" />
 
             <TextView
+                android:id="@+id/detail_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/detail_name"
-                android:textSize="30dp"
-                android:text="@string/app_name"
-                android:textStyle="bold"
                 android:layout_marginLeft="20dp"
                 android:layout_marginBottom="10dp"
-                android:textColor="@color/colorPrimaryDark"/>
+                android:text="@string/app_name"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="30dp"
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="match_parent"
-                android:visibility="visible"
                 android:layout_height="3dp"
                 android:layout_marginBottom="20dp"
-                android:background="#D3D3D3"/>
+                android:background="#D3D3D3"
+                android:visibility="visible" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Deskripsi : "
                 android:layout_marginLeft="20dp"
                 android:layout_marginBottom="20dp"
+                android:text="Deskripsi : "
                 android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/detail_detail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Detail Item"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="10dp"
-                android:id="@+id/detail_detail"
-                android:ellipsize="end"/>
-            <LinearLayout
+                android:ellipsize="end"
+                android:text="Detail Item" />
+
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="200dp">
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center|bottom"
+                android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/btn_favorite"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/colorPrimaryDark"
-                    android:layout_weight="1"
-                    android:text="favorite"
-                    android:textColor="@color/whiteColor"
-                    android:textSize="18sp"/>
-            </LinearLayout>
+            </RelativeLayout>
         </LinearLayout>
-
     </ScrollView>
+
+    <Button
+        android:id="@+id/btn_favorite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:background="@color/colorPrimaryDark"
+        android:text="favorite"
+        android:textColor="@color/whiteColor"
+        android:textSize="18sp"
+        app:layout_anchor="@+id/scrollView2"
+        app:layout_anchorGravity="bottom|center" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
